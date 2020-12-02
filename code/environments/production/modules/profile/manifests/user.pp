@@ -15,8 +15,8 @@ class profile::user (
   }
   file { [$users['home_dir'], $users['key_dir']]:
     ensure => directory,
-    owner  => '$users['name'],
-    group  => '$users['name'],
+    owner  => $users['name'],
+    group  => $users['name'],
     mode   => '0600',
   }
 }
