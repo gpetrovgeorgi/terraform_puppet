@@ -11,10 +11,6 @@ profile::user::users:
   key_dir: '/home/grigor/.ssh'
   sudo_file: '/etc/sudoers.d/wheel'
   sudoers_content: '%wheel ALL=(ALL) ALL' 
-profile::user::user_access:
-  user_key: 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCdpkSiwChSjpr91Q4HQE8aB4HxNisN7g7R9WZU+s3I8LJavh/cduVW6kvtIwMV9os+q1ipSi9KxYQGvyED2MRVXwjUQUAREhCeXw44VMzz65Ep0Gw4q4EHjJuKA6ojgaRswT4Bc7Ed8IzKpFxR086e6jAt3dM0IjMoS0JPvq2RIsDsYRSPyxCvTcvGrpZc3Dk5Yb6brJ+4QqTXSalJW1apSZ0vxyhcj5+GQAFeUkX+DQqKvJ35CFG9CC3YYkD4zRORCBakPdWujZOQnjRxVTUTM8kM8pMLZD8l/jatVyvb6YSfiP/1kxwpYj5afkpZyLX6NVfiMEXa6rAtnD+8ZGd9'
-  key_destination: '/home/grigor/.ssh/id_rsa.pub' 
-  key_type: 'rsa'
 profile::basic_services::basic_services:
   service_nginx: 'nginx'
   nginx_ensure: running

@@ -1,6 +1,5 @@
 class profile::user (
   Hash $users,
-  Hash $user_access,
 ){
   user { $users['name']:
     ensure   => $users['ensure'],
@@ -19,12 +18,5 @@ class profile::user (
     owner  => '$users['name'],
     group  => '$users['name'],
     mode   => '0600',
-  }
-  sshkey { 'grigor':
-    ensure  => present,
-    key     => $user_access['user_key'],
-    target  => $user_access['key_destination'],
-    type    => $user_access['key_type'],
-    require => File['/home/grigor/.ssh/'],
   }
 }
