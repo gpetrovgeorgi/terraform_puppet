@@ -1,0 +1,8 @@
+<?php
+echo '<p style="text-align:center;color:red">
+Hello from <%= @address_ipv4 %>/<%= @public_ipv4 %> running PHP '.
+phpversion() . ' on <%= @os_type %> <%= @os_release %>.
+<br> I come with <%= @num_cpus %> x <%= @cpu_model %>
+and <%= @mem_total %> MB of memory. </p>';
+phpinfo(INFO_LICENSE);
+?>

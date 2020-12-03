@@ -10,10 +10,13 @@ profile::user::users:
   home_dir: '/home/grigor'
   key_dir: '/home/grigor/.ssh'
   sudo_file: '/etc/sudoers.d/wheel'
-  sudoers_content: '%wheel ALL=(ALL) ALL' 
+  sudoers_content: '%wheel ALL=(ALL) ALL'
 profile::basic_services::basic_services:
   service_nginx: 'nginx'
   nginx_ensure: running
   nginx_enabled: true
   package_phpfpm: 'php-fpm'
-  phpfpm_ensure: latest  
+  phpfpm_ensure: latest
+  service_phpfpm: 'php-fpm'
+  phpfpm_ensure: running
+  phpfpm_enabled: true
