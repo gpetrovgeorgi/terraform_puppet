@@ -24,7 +24,7 @@ class profile::basic_services (
   service { $basic_services['service_phpfpm']:
     ensure  => $basic_services['phpfpm_service_ensure'],
     enable  => $basic_services['phpfpm_enabled'],
-    require => $basic_services['package_phpfpm'],
+    require => Package[$basic_services['package_phpfpm']],
   }
   file { '/var/www/html':
     ensure => directory,
