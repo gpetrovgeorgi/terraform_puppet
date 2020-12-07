@@ -26,7 +26,7 @@ class profile::basic_services (
     enable  => $basic_services['phpfpm_enabled'],
     require => Package[$basic_services['package_phpfpm']],
   }
-  file { '/var/www/html':
+  file { ['/var/www', '/var/www/html']:
     ensure => directory,
     owner  => 'root',
     group  => 'root',
