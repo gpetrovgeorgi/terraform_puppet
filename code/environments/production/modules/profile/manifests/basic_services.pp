@@ -14,11 +14,6 @@ class profile::basic_services (
     ensure  => $basic_services['phpfpm_ensure'],
     require => Service[$basic_services['service_nginx']],
   }
-  service { $basic_services['service_phpfpm']:
-    ensure  => $basic_services['phpfpm_ensure'],
-    enable  => $basic_services['phpfpm_enabled'],
-    require => $basic_services['package_phpfpm'],
-  }
   file { '/var/www/html':
     ensure => directory,
     owner  => 'root',

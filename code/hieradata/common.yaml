@@ -17,6 +17,3 @@ profile::basic_services::basic_services:
   nginx_enabled: true
   package_phpfpm: 'php-fpm'
   phpfpm_ensure: latest
-  service_phpfpm: 'php-fpm'
-  phpfpm_ensure: running
-  phpfpm_enabled: true
