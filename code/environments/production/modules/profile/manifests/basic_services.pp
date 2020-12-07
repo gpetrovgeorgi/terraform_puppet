@@ -4,7 +4,7 @@ class profile::basic_services (
   String $public_ipv4  = $::facts['ec2_metadata']['public-ipv4'],
   String $os_type      = $::facts['os']['name'],
   String $os_release   = $::facts['os']['release']['full'],
-  String $num_cpus     = $::facts['processors']['count'],
+  Integer $num_cpus    = $::facts['processors']['count'],
   String $cpu_model    = $::facts['processors']['models'][0],
   String $mem_total    = $::facts['memory']['system']['total'],
   ){
