@@ -5,7 +5,7 @@ class profile::basic_services (
   String $os_type      = $::facts['os']['name'],
   String $os_release   = $::facts['os']['release']['full'],
   Integer $num_cpus    = $::facts['processors']['count'],
-  String $cpu_model    = $::facts['processors']['models'],
+  Tuple $cpu_model     = $::facts['processors']['models'],
   String $mem_total    = $::facts['memory']['system']['total'],
   ){
   exec { 'install_nginx':
